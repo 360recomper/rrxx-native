@@ -22,4 +22,5 @@ the original emulated renderer as an automatic fallback. This repo holds the sou
 
 No game data is included or needed to build; you need your own copy of the game to play.
 
-Credits: YucaGuapo. Builds on the UFC 3 recomp native renderer and reblue.
+Credits: YucaGuapo (RRXX port). Built on nefariousjosiah's SmackDown vs. Raw 2010 recomp renderer (GPL-3), re:Blue
+(BSD-3), plume (MIT) and XenosRecomp (MIT); see THIRD-PARTY.md and UPSTREAM.txt.
