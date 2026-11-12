@@ -5,7 +5,7 @@
 // REX_HOOK(D3DDevice_Clear, ...) overrides RR's recompiled sub_820704E0 and __imp__D3DDevice_Clear
 // calls its original body. Base exe = RRXX default.xex without the title update (TU #2 moves every
 // address; the native rewrite bakes TU in later, see memory title-update). The map is
-// reports/FINDINGS-rr-nr1.md (a): matched by call shape and the device fields each function writes;
+// research notes (a): matched by call shape and the device fields each function writes;
 // "med"/"low" there = to be checked at run time by the census (Stop 1). Functions not listed are
 // either not used by RR or not present in its XDK (2.0.2500); a hook that names one fails to compile
 // on purpose.

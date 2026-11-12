@@ -21,7 +21,7 @@
  * word), 20-byte vertex / index buffers (fetch constant / address at +0x0C), 40-byte textures
  * (fetch constant at +0x10) and 64-byte surfaces; its device is 0x5080 bytes. Those branches sit
  * next to the UFC ones below; the RR function each offset comes from is in src/rr_d3d.h and
- * reports/FINDINGS-rr-nr1.md. Offsets are offline evidence only until the census (Stop 1).
+ * research notes. Offsets are offline evidence only until the census (Stop 1).
  */
 #pragma once
 
@@ -415,7 +415,7 @@ static_assert(sizeof(DeviceFetchConstant) == 24);
 // Rumble Roses XX D3DDevice: 0x5080 bytes (Direct3D_CreateDevice sub_820706F0, li r3,20608). Its own
 // layout, close to neither UFC (0x5F80) nor SvR 2007 (0x5000). Constants and fetch constants sit
 // where UFC has them; render targets, streams, textures and shaders sit 0x160-0x1A0 past SvR 2007's.
-// Source of each offset: reports/FINDINGS-rr-nr1.md (a), src/rr_d3d.h. Medium entries are marked;
+// Source of each offset: research notes (a), src/rr_d3d.h. Medium entries are marked;
 // all of it is offline evidence until the census build (Stop 1) checks it at run time.
 struct RrStreamSource {
   be_u32 offset;        // +0  SetStreamSource r6

@@ -7,7 +7,7 @@
 // (one flag test per call). Built only while RRXX_NATIVE_HOOKS is off (cmake/native_renderer.cmake),
 // because the native hooks override the same functions.
 //
-// What it answers (Stop 1, reports/PLAN-rr-nr2.md):
+// What it answers (Stop 1, research notes):
 //   - draws per frame the hooks see: BeginVertices / DrawVertices / DrawIndexedVertices, plus the draw
 //     packets inside the ring range each Clear and Resolve writes. Compare with the emulated GPU's own
 //     count: --trace_draw_ps=0 --trace_draw_every=N logs "Draw trace c.f (frame F): end, X of Y draws

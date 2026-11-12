@@ -2,10 +2,10 @@
 // src/native/ufc_d3d.h (RR-NR-3). The same layout as a struct is reblue/gpu/d3d.h's
 // RRXX_NATIVE_RENDERER branch; static_asserts below keep the two equal.
 //
-// RR links XDK D3D 2.0.2500, older than UFC's and SvR's (reports/FINDINGS-rr-nr1.md). Device =
+// RR links XDK D3D 2.0.2500, older than UFC's and SvR's (research notes). Device =
 // 0x5080 bytes (Direct3D_CreateDevice sub_820706F0, li r3,20608). Each offset names the function
 // whose store proves it. Offline evidence only: the census (Stop 1) checks every one at run time.
-// "med" = medium confidence in FINDINGS-rr-nr1.md / PLAN-rr-nr2.md Q5.
+// "med" = medium confidence in research notes / PLAN-rr-nr2.md Q5.
 
 #pragma once
 

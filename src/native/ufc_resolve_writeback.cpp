@@ -1,4 +1,4 @@
-// NR-10b: see ufc_resolve_writeback.h. Design and proof runs: FINDINGS-native-renderer.md.
+// NR-10b: see ufc_resolve_writeback.h. Design and proof runs: research notes.
 
 #include "ufc_resolve_writeback.h"
 

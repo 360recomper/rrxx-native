@@ -341,7 +341,7 @@ index f9a2135..7e1cf58 100644
 +address = 0x8216DFA0  # lis r11,-32138 (first instruction)
 +name = "RRXX_ApplyCheats"
 +
-+# Cut content / debug (reports/cut-content.md).
++# Cut content / debug (research notes).
 +# sub_822607D8 (event scene, vtable 0x820196C0 slot 6) asks slot 11 whether an
 +# event is queued (global 0x82A8A31C) and plays it; if not, slot 13
 +# (sub_82260ED8) opens the leftover event debug menu (sub_8229A500 /
@@ -359,7 +359,7 @@ index f9a2135..7e1cf58 100644
 +name = "RRXX_LogAssetPath"
 +registers = ["r3"]
 +
-+# Created wrestlers ("Lambda", reports/lambda-hook.md). A character model is a
++# Created wrestlers ("Lambda", research notes). A character model is a
 +# composite of up to 16 parts; menus, Locker Room, character select and
 +# Customize add each part through sub_82180760(composite, slot, id, kind,
 +# variant). Matches reuse the model built on the select screen.
@@ -440,7 +440,7 @@ index f9a2135..7e1cf58 100644
 +name = "RRXX_LogDlcRead"
 +registers = ["r3", "r31"]
 +
-+# Exhibition stage select (reports/arena-import.md section 10, setting
++# Exhibition stage select (research notes section 10, setting
 +# exhibition_stages). The picker was built for 3 stages; these hooks replace the
 +# fixed list. All are no-ops while the setting is empty.
 +[[entrypoint.midasm_hook]]
@@ -1572,7 +1572,7 @@ index 7a451ab..bb6c22a 100644
 +  }
 +}
 +
-+// Cut content / debug (reports/cut-content.md).
++// Cut content / debug (research notes).
 +REXCVAR_DECLARE(bool, debug_event_menu);
 +REXCVAR_DECLARE(bool, log_asset_paths);
 +
@@ -1603,7 +1603,7 @@ index 7a451ab..bb6c22a 100644
 +  }
 +}
 +
-+// Created wrestlers ("Lambda"), reports/lambda-hook.md.
++// Created wrestlers ("Lambda"), research notes.
 +REXCVAR_DECLARE(bool, log_lambda_parts);
 +
 +namespace {
@@ -2037,7 +2037,7 @@ index 7a451ab..bb6c22a 100644
 +              r3.u32, GuestU32(r31.u32 + 844), std::string(path, strnlen(path, 200)));
 +}
 +
-+// Exhibition stage select (reports/arena-import.md section 10). The picker on the
++// Exhibition stage select (research notes section 10). The picker on the
 +// character-select screen (object = char select + 11752, cursor at +144) is built
 +// for 3 stages: sub_8214CAC8 maps the cursor to a stage (0, 1, 4), sub_8214CA80
 +// maps a stage back to the cursor, the input handler sub_8214D0B0 (on the +28
@@ -2682,7 +2682,7 @@ index 7a451ab..bb6c22a 100644
 +  LogHeapFailure(2, r28.u32, uint64_t(r30.u32) * 16);
 +}
 +
-+// Extra entrance tracks (MU-4, reports/handoff-music.md). sub_820858A0(name, &found)
++// Extra entrance tracks (MU-4, research notes). sub_820858A0(name, &found)
 +// scans a fixed 63-entry table at 0x820057E8 (20 bytes: bank name, cue name, title,
 +// artist, album) for the cue name built from the music number: "ENTRANCE_%03d", or
 +// "MENU_%03d" with number - 46 for numbers >= 61 (61/62 = MENU_015/016). The player
@@ -3123,7 +3123,7 @@ index 7a451ab..bb6c22a 100644
 +  }
 +}
 +
-+// Strike combo windows for imported acts (AUD-8b, reports/handoff-movesets.md "AUD-8").
++// Strike combo windows for imported acts (AUD-8b, research notes "AUD-8").
 +// sub_821B1040(act) looks the act up in a fixed 49-entry table at 0x82013FC8 ({u16 act,
 +// u8 0, u8 frame}) and returns frame * 2, or 0 when the act is missing; sub_821BF140 only
 +// plays the next COMBO/COMBOD hit at that frame, so a neutral strike (DAGEKI0) that is not in
@@ -4022,7 +4022,7 @@ index 0000000..2cbd33b
 --- /dev/null
 +++ b/cmake/native_renderer.cmake
 @@ -0,0 +1,153 @@
-+# Native renderer for Rumble Roses XX (RR-NR-4..6; plan reports/PLAN-rr-nr2.md in the research repo).
++# Native renderer for Rumble Roses XX (RR-NR-4..6; plan research notes in the research repo).
 +#
 +# Ported from UFC-native (cmake/native_renderer.cmake), which took it from the SvR 2010 recomp by
 +# nefariousjosiah (GPL-3.0), adapted from re:Blue (BSD-3-Clause); see native/LICENSE*, native/THIRD-PARTY.md.
